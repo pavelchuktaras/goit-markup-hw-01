@@ -18,19 +18,13 @@
 body {
   font-family: "Roboto", sans-serif;
   color: var(--main-txt-clr);
-  font-size: 16px;
-  line-height: calc(24 / 16);
   letter-spacing: 0.02em;
 }
 
 /* ====== HEADER ===== */
 
-.header {
-  color: var(--color-white);
-}
-
 .header-logo {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   color: var(--logo-txt-clr);
   font-weight: 800;
   font-size: 18px;
@@ -49,12 +43,16 @@ body {
 
 .address-link {
   color: var(--p-txt-clr);
+  font-size: 16px;
+  line-height: calc(24 / 16);
 }
 
 .header-link,
 .portfolio-link {
   color: var(--main-txt-clr);
   font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
 }
 
 .header-link:hover,
@@ -74,15 +72,49 @@ body {
 
 /*=====MAIN=====*/
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title-studio {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  color: var(--main-txt-clr);
+}
+
 /*===What are we doing===*/
 
 .doing-txt {
-  font-weight: 700;
   font-size: 36px;
   line-height: calc(40 / 36);
+  text-align: center;
 }
 
 /*====Our Team====*/
+
+.team-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  color: var(--main-txt-clr);
+}
+
+.team-title {
+  font-size: 36px;
+  line-height: calc(40 / 36);
+  text-align: center;
+}
 
 .team {
   background-color: var(--light-bg-clr);
@@ -98,12 +130,9 @@ body {
 /*===feature==*/
 
 .paragraph {
-  font-weight: 400;
   color: var(--p-txt-clr);
-
-  /* SLATE */
-
-  color: #434455;
+  font-size: 16px;
+  line-height: calc(24 / 16);
 }
 
 .feature-item {
@@ -119,7 +148,6 @@ body {
 }
 .hero-txt {
   color: var(--color-white);
-  font-weight: 700;
   font-size: 56px;
   line-height: calc(60 / 56);
 }
@@ -127,6 +155,7 @@ body {
 /*====LIST===*/
 
 .hero-list,
+.header-list,
 .feature-list,
 .team-list,
 .doing-list,
@@ -142,8 +171,6 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: calc(24 / 16);
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
   background-color: var(--logo-txt-clr);
   cursor: pointer;

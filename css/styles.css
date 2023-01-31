@@ -293,8 +293,11 @@ section {
   gap: 24px;
 }
 
+.doing {
+  padding-bottom: 120px;
+}
+
 .main-theses,
-.doing,
 .team {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -341,8 +344,7 @@ section {
   display: flex;
   gap: 24px;
   justify-content: center;
-  /* margin-bottom: 72px; */
-  padding-bottom: 72px;
+  margin-bottom: 72px;
   margin-right: auto;
   margin-left: auto;
 }

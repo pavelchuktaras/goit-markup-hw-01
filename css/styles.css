@@ -11,8 +11,11 @@
   --main-bg-clr: #2e2f42;
   --color-green: #31d0aa;
   --color-light-slate: #8e8f99;
-
+  --ocean-bg-color: #404bbf;
   --light-bg-clr: #f4f4fd;
+
+  /*SVG CLR*/
+  --fill-clr-icons: #afb1b8;
 
   /*===others===*/
   --indent: 24px;
@@ -139,6 +142,11 @@ ol {
   display: block;
 }
 
+.portfolio-link:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .header-link:hover,
 .header-link:focus,
 .address-link:hover,
@@ -200,6 +208,13 @@ ol {
   margin-bottom: 72px;
 }
 
+.customers-txt {
+  font-size: 36px;
+  line-height: calc(40 / 36);
+  text-align: center;
+  margin-bottom: 72px;
+}
+
 /*====Our Team====*/
 
 .team-card-container {
@@ -233,6 +248,18 @@ ol {
   flex-basis: calc(
     (100% - var(--indent) * (var(--team-items) - 1)) / var(--team-items)
   );
+}
+
+.links-team {
+  padding: 30%;
+  border-radius: 50%;
+  display: flex;
+}
+
+.links-team-footer {
+  padding: 20%;
+  border-radius: 50%;
+  display: flex;
 }
 
 .team-item,
@@ -277,6 +304,19 @@ section {
   margin-right: auto;
 }
 
+.overlay {
+  max-width: 1440px;
+  max-height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/hero.jpg);
+}
+
 .hero-txt {
   color: var(--color-white);
   font-size: 56px;
@@ -288,6 +328,30 @@ section {
   margin-left: auto;
 }
 
+.bg-fon-main {
+  display: flex;
+  padding-right: auto;
+  padding-left: auto;
+  gap: 8px 24px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.bg-fon {
+  width: 264px;
+  height: 112px;
+  background: var(--light-bg-clr);
+  border-radius: 4px;
+}
+
+.icon-main {
+  margin: 24px 102px;
+}
+
+.icon-main:hover {
+  fill: #4d5ae5;
+}
+
 .main-theses-container {
   display: flex;
   gap: 24px;
@@ -297,6 +361,37 @@ section {
   padding-bottom: 120px;
 }
 
+.customers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.customers-icon {
+  margin: 16px 32px;
+  fill: var(--fill-clr-icons);
+}
+
+.customers-icon:hover {
+  fill: var(--ocean-bg-color);
+}
+
+.customers-item {
+  border: 1px solid var(--color-light-slate);
+  border-radius: 4px;
+  width: 168px;
+  height: 88px;
+}
+
+.customers-item:hover {
+  border-color: var(--ocean-bg-color);
+}
+
+.customers-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
 .main-theses,
 .team {
   padding-top: 120px;
@@ -322,6 +417,10 @@ section {
   gap: 24px;
 }
 
+.costomers-list {
+  display: flex;
+}
+
 .doing-item {
   flex-basis: calc(100% - 2 * 24) / 3;
 }
@@ -331,12 +430,59 @@ section {
   text-align: center;
 }
 
+.icon-footer {
+  display: flex;
+}
+
+.icon-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.icon-footer {
+}
+
+.icon-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+.icon-list-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 8px;
+}
+
+.icon-list:hover {
+  background-color: var(--ocean-bg-color);
+}
+
+.icon-list-footer:hover {
+  background-color: var(--color-green);
+}
+
 .hero-list,
 .header-list,
 .feature-list,
 .team-list,
 .doing-list,
-.portfolio-list {
+.portfolio-list,
+.bg-fon-main,
+.icon-list,
+.customers-list {
   list-style: none;
 }
 
@@ -430,6 +576,7 @@ section {
   flex-basis: calc(
     (100% - var(--indent) * (var(--project-items) - 1)) / var(--project-items)
   );
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .wrapper {
@@ -442,6 +589,22 @@ section {
 
 footer {
   background-color: var(--main-bg-clr);
+}
+
+.footer-media-txt {
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.02em;
+}
+
+.right-footer {
+  margin-right: 120px;
+}
+
+.footer-flex {
+  display: flex;
 }
 
 .footer-logo {
@@ -464,4 +627,10 @@ footer {
 .footer-container {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.item-footer {
+  align-items: start;
+  justify-content: start;
+  gap: 16px;
 }

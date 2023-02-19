@@ -790,17 +790,10 @@ footer {
 }
 
 .footer-form-div {
-  display: flex;
-  /* flex-wrap: wrap; */
-  align-items: center;
   width: 453px;
-  align-items: baseline;
-  flex-direction: column;
 }
 
 .footer-subscribe {
-  display: flex;
-
   font-weight: 500;
   font-size: 16px;
   line-height: calc(24 / 16);
@@ -812,8 +805,6 @@ footer {
   margin-right: 80px;
 }
 
-.footer-label {
-}
 .form-footer {
   margin-right: 24px;
 }
@@ -826,6 +817,7 @@ footer {
   border-radius: 4px;
   padding: 8px 16px;
   color: rgba(255, 255, 255, 0.6);
+  margin-right: 24px;
 }
 
 .footer-input:focus {
@@ -877,12 +869,14 @@ footer {
   width: 408px;
   border-radius: 4px;
   background-color: var(--modal-color);
+
+  padding: 72px 24px 24px;
 }
 
 .modal-btn {
-  position: relative;
+  position: absolute;
   top: 24px;
-  left: 360px;
+  right: 24px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -908,28 +902,18 @@ footer {
   opacity: 0;
   pointer-events: none;
 }
-.modal {
-}
 
 .modal-title {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
+  margin-bottom: 14px;
   width: auto;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(24 / 16);
 
   text-align: center;
-}
-
-.modal-form {
-  display: block;
-  padding: 14px 24px;
-  /* position: relative;
-  left: 24px;
-  top: 14px; */
 }
 
 .modal-form-label {
@@ -949,8 +933,6 @@ footer {
 }
 
 .modal-form-field {
-  display: block;
-
   padding-left: 38px;
   padding-right: 38px;
 
@@ -1009,6 +991,7 @@ footer {
 }
 
 .span-aggrie {
+  margin-left: 10px;
   font-weight: 400;
   font-size: 12px;
   line-height: calc(16 / 12);
@@ -1030,9 +1013,6 @@ footer {
   margin-left: auto;
   align-items: center;
   justify-content: center;
-
-  margin-bottom: 24px;
-
   width: 169px;
   height: 56px;
   background-color: var(--logo-txt-clr);
@@ -1052,10 +1032,10 @@ footer {
 
   transition: background-color 250ms var(--time-cubik);
 
-  filter: grayscale(1);
+  /* filter: grayscale(1);
   background-color: transparent;
   color: inherit;
-  cursor: not-allowed;
+  cursor: not-allowed; */
 }
 
 .modal-checkdox {

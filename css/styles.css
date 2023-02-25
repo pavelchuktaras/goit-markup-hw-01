@@ -1,3 +1,8 @@
+/* ====BREACK-POINTS=====
+=TEL-480px=
+=TAB-768px=
+=DESK-1200px= */
+
 :root {
   /*TXT COLOR*/
   --main-txt-clr: #2e2f42;
@@ -31,6 +36,7 @@
   --feature-items: 4;
   --project-items: 3;
   --team-items: 4;
+  --feature-items-tablet: 2;
   --time-cubik: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -74,18 +80,30 @@ ol {
   padding: 0px;
 }
 .container {
-  width: 1158px;
+  min-width: 320px;
+  max-width: 448px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* 
+
   outline: 2px solid red;
-  outline-offset: -2px; */
+  outline-offset: -2px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
 }
 
 /* ====== HEADER ===== */
-
 .header {
   border: 1px solid #e7e9fc;
   border-top: none;
@@ -211,11 +229,25 @@ ol {
 }
 
 .title-studio {
-  font-weight: 500;
+  /* font-weight: 500;
   font-size: 20px;
-  line-height: calc(24 / 20);
+  line-height: calc(24 / 20); */
   color: var(--main-txt-clr);
   margin-bottom: 8px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40 / 36);
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+@media screen and (min-width: 1200px) {
+  .title-studio {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+  }
 }
 
 /*===What are we doing===*/
@@ -236,6 +268,12 @@ ol {
 
 .doing {
   padding-bottom: 120px;
+}
+
+@media screen and (max-width: 1199px) {
+  .doing {
+    display: none;
+  }
 }
 
 .doing-list {
@@ -308,7 +346,17 @@ ol {
   width: 360px;
 }
 
-.main-theses,
+.main-theses {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+@media screen and (min-width: 1200px) {
+  .main-theses {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
 .team {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -327,16 +375,35 @@ ol {
   font-size: 16px;
   line-height: calc(24 / 16);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
+}
+@media screen and (min-width: 1200px) {
+  .paragraph {
+    font-weight: 400;
+  }
 }
 
 .feature-item {
+  /* display: flex;
   font-weight: 500;
   font-size: 20px;
   line-height: calc(24 / 20);
   flex-basis: calc(
     (100% - var(--indent) * (var(--feature-items) - 1)) / var(--feature-items)
-  );
+  ); */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* flex-basis: calc(
+    (100% - var(--indent) * (var(--feature-items) -1)) / var(--feature-items)
+  ); */
+  gap: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .feature-item {
+    justify-content: center;
+  }
 }
 
 /*==HERO==*/
@@ -396,6 +463,12 @@ section {
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
+}
+
+@media screen and (max-width: 1199px) {
+  .bg-fon {
+    display: none;
+  }
 }
 
 .icon-main {
@@ -477,9 +550,41 @@ section {
   gap: 40px;
 }
 
+/* .feature-list {
+  /* display: flex;
+gap: 24px; */
+
 .feature-list {
-  display: flex;
-  gap: 24px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 72px 24px;
+  }
+}
+.feature-item:not(:last-child) {
+  margin-bottom: 72px;
+}
+@media screen and (min-width: 768px) {
+  .feature-item {
+    flex-basis: calc(
+      (100% - var(--indent) * (var(--feature-items-tablet) - 1)) /
+        var(--feature-items-tablet)
+    );
+  }
+  .feature-item:not(:last-child) {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+  }
 }
 
 .costomers-list {
@@ -489,6 +594,7 @@ section {
 .icon-item {
   display: flex;
   justify-content: center;
+
   align-items: center;
   gap: 24px;
 }
@@ -805,9 +911,6 @@ footer {
   margin-right: 80px;
 }
 
-.form-footer {
-  margin-right: 24px;
-}
 .footer-input {
   width: 264px;
   height: 40px;
@@ -829,7 +932,6 @@ footer {
 }
 .footer-btn-form {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
@@ -1052,9 +1154,9 @@ footer {
 
   transition: background-color 250ms var(--time-cubik),
     border-color 250ms var(--time-cubik);
-  background-image: url(../images/svg/symbol-defs.svg#icon-cheked);
+  /* background-image: url(../images/svg/symbol-defs.svg#icon-cheked);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
   background-size: 14px;
   fill: var(--color-white);
 }

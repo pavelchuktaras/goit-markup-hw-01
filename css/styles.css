@@ -728,7 +728,8 @@ gap: 24px; */
 .bg-fon-main,
 .icon-list,
 .customers-list,
-.address-mobile {
+.address-mobile,
+.menu-icon {
   list-style: none;
 }
 
@@ -1495,11 +1496,13 @@ footer {
   margin: 0;
   list-style: none;
   margin-bottom: 284px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .mobile-menu .link {
   display: block;
-  margin-bottom: 40px;
   font-weight: 700;
   font-size: 36px;
   line-height: calc(40 / 36);
@@ -1522,4 +1525,37 @@ footer {
   font-size: 20px;
   line-height: calc(24 / 20);
   font-style: normal;
+}
+
+.menu-icons {
+  display: flex;
+  gap: 56px;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.menu-icon {
+  gap: 56px;
+  background-color: var(--logo-txt-clr);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  justify-content: space-between;
+}
+
+.icon-team-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-addres {
+  margin-bottom: 48px;
+}
+
+.container-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 428px;
 }
